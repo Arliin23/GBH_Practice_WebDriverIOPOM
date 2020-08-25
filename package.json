@@ -1,0 +1,19 @@
+{
+  "name": "gbh_practice_webdriveriopom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx wdio run wdio.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arliin23/GBH_Practice_WebDriverIOPOM.git"
+  },
+  "author": "Arianna Díaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arliin23/GBH_Practice_WebDriverIOPOM/issues"
+  },
+  "homepage": "https://github.com/Arliin23/GBH_Practice_WebDriverIOPOM#readme"
+}
