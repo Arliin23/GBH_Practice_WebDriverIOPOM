@@ -90,7 +90,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'https://gbh.com.do/es/',
+    baseUrl: 'https://gbh.com.do/',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -177,8 +177,16 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    // before: function (capabilities, specs) {
-    // },
+    before: function () {
+
+        let {assert, should, expect} = require('chai');
+        const chaiWebdriver = require('chai-webdriverio').default;
+        chai.use(chaiWebdriver(browser));
+        global.assert = assert;
+        global.should = should;
+        global.expect = expect;
+
+    },
     /**
      * Runs before a WebdriverIO command gets executed.
      * @param {String} commandName hook command name
@@ -195,18 +203,9 @@ exports.config = {
     /**
      * Function to be executed before a test (in Mocha/Jasmine) starts.
      */
-    beforeTest: function () {
+    //beforeTest: function () {
 
-        const chai = require('chai');
-        const chaiWebdriver = require('chai-webdriverio').default;
-
-        chai.use(chaiWebdriver(browser));
-
-        global.assert = chai.assert;
-        global.should = chai.should;
-        global.expect = chai.expect;
-
-     },
+     //},
     /**
      * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
      * beforeEach in Mocha)
