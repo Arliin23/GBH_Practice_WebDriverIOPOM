@@ -2,7 +2,7 @@ class ChangeStaffAugPage {
     //Buttons
     get solutionBtn() { return $("#menu-item-3240 > a"); }
     get itSupportServicedBtn() { return $("#menu-item-4115 > a"); }
-    get itFoundationBtn() {return $('');}
+    get itFoundationBtn() {return $('#menu-item-3253 > a');}
 
 
     getTitle() {
@@ -12,9 +12,10 @@ class ChangeStaffAugPage {
     goToNextPage() {
         this.solutionBtn.waitForDisplayed();
         this.solutionBtn.moveTo();
-        this.agentChangeStaffdBtn.waitForDisplayed();
-        this.agentChangeStaffdBtn.click();
-
+        this.itSupportServicedBtn.waitForDisplayed();
+        this.itSupportServicedBtn.click();
+        this.itFoundationBtn.waitForDisplayed();
+        this.itFoundationBtn.click();
     }
 
 }
