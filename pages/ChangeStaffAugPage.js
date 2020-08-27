@@ -1,13 +1,10 @@
 class ChangeStaffAugPage {
-    //Buttons
+    //Elements
     get solutionBtn() { return $("#menu-item-3240 > a"); }
     get itSupportServicedBtn() { return $("#menu-item-4115 > a"); }
-    get itFoundationBtn() {return $('#menu-item-3253 > a');}
+    get itFoundationBtn() { return $('#menu-item-3253 > a'); }
 
-
-    getTitle() {
-        return browser.getTitle();
-    }
+    getTitle() { return browser.getTitle(); }
 
     goToNextPage() {
         this.solutionBtn.waitForDisplayed();
@@ -17,7 +14,5 @@ class ChangeStaffAugPage {
         this.itFoundationBtn.waitForDisplayed();
         this.itFoundationBtn.click();
     }
-
 }
-
 module.exports = new ChangeStaffAugPage();

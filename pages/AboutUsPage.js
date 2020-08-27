@@ -1,15 +1,15 @@
-class ItNetworkSolPage {
+class AboutUsPage {
     //Elements
     get whoWeAreBtn() { return $("#menu-item-3241 > a"); }
-    get aboutUsBtn() { return $("#menu-item-3243 > a"); }
+    get pointDifferentiationBtn() { return $("#menu-item-3242 > a"); }
 
     getTitle() { return browser.getTitle(); }
 
     goToNextPage() {
         this.whoWeAreBtn.waitForDisplayed();
         this.whoWeAreBtn.moveTo();
-        this.aboutUsBtn.waitForDisplayed();
-        this.aboutUsBtn.click();
+        this.pointDifferentiationBtn.waitForDisplayed();
+        this.pointDifferentiationBtn.click();
     }
 }
-module.exports = new ItNetworkSolPage();
+module.exports = new AboutUsPage();

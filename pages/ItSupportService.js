@@ -3,7 +3,6 @@ class ItSupportService {
     get solutionBtn() { return $("#menu-item-3240 > a"); }
     get itNetworkSolutionsdBtn() { return $("#menu-item-3252 > a"); }
 
-
     getTitle() {
         return browser.getTitle();
     }
