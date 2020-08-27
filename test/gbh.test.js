@@ -11,7 +11,7 @@ const aboutUs = require("../pages/AboutUsPage");
 const pointDifferentiation = require("../pages/PointDifferentiationPage");
 const blog = require("../pages/BlogPage");
 const caseStudies = require("../pages/CaseStudiesPage");
-const careers = require("../pages/CareersPage")
+const careers = require("../pages/CareersPage");
 const { assert } = require("chai");
 
 describe("Verifing links on the navigation bar", () => {
